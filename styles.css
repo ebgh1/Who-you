@@ -1,0 +1,52 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media screen and (max-width: 600px){
+    .midHeaderColumn{
+        font-size: smaller;
+        padding-top: 2px;
+    }
+
+    .hamburgerBars {
+        width: 30px;
+        height: 4px;
+        padding: 3px;
+    }
+}
+
+.hamburgerBars {
+    width: 40px;
+    height: 6px;
+    background-color:#66FCF1;
+    margin: 6px 0;
+    border-radius: 10px;
+}
+.hamburgerContainer {
+    width: 45px;
+    padding: 3px;
+    padding-left: 8px;
+}
+
+.headerBox {
+    display: flex;
+    background-color:#0b0C10;
+    text-align: center;
+}
+
+.leftHeaderColumn {
+    padding-top: 5px;
+    padding: 15px;
+    width: 33%;
+}
+
+.midHeaderColumn {
+    color: #66FCF1;
+    padding-top: 4px;
+    width: 33%;
+}
+
+.rightHeaderColumn {
+    width: 33%;
+}
+
