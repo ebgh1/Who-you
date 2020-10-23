@@ -5,13 +5,13 @@
 @media screen and (max-width: 600px){
     .midHeaderColumn{
         font-size: smaller;
+        text-align: center;
         padding-top: 2px;
     }
 
     .hamburgerBars {
         width: 30px;
-        height: 4px;
-        padding: 3px;
+        height: 6px;
     }
 }
 
@@ -42,7 +42,7 @@
 
 .midHeaderColumn {
     color: #66FCF1;
-    padding-top: 4px;
+    text-align: center;
     width: 33%;
 }
 
