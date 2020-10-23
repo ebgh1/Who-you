@@ -5,7 +5,22 @@ function openDrawer() {
   function closeDrawer() {
     document.getElementById("menu").style.width = "0";
   }
-
+  
+  function incrementScore(characterName) {
+    const charIndex = characters.findIndex(char => char == characterName);
+    if (charIndex !== -1) scoreboard[charIndex] += 1;
+  }
+  
+  function youAre() {
+    const highestScore = Math.max(...scoreboard);
+    const winnerIndex = scoreboard.indexOf(highestScore);
+    return characters[winnerIndex];
+  }
+  
+  function assignAnswer(questionNo, answerVal){ 
+    answers[questionNo] = answerVal
+    console.log(answers)
+  }
   const characters = [
     "Snake",
     "Doom Slayer",
@@ -32,13 +47,11 @@ function openDrawer() {
   
   let scoreboard = new Array(characters.length).fill(0);
   
-  function incrementScore(ans) {
-    const charIndex = characters.findIndex(char => char.traits.includes(ans));
-    if (charIndex !== -1) scoreboard[charIndex] += 1;
+  let answers = {
+    "q1": "",
+    "q2": "",
+    "q3": "",
+    "q4": "",
+    "q5": "",
   }
   
-  function youAre() {
-    const highestScore = Math.max(...scoreboard);
-    const winnerIndex = scoreboard.indexOf(highestScore);
-    return characters[winnerIndex].name;
-  }
