@@ -4,21 +4,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div class="headerBox">
-
+<body style="margin: 0; padding: 0;">
+<div>
+    <div class="headerBox">
     <!-- style="border: solid 1px red; -->
-
+    <div id="menu" class="sidebar">
+        <a href="#" class="closebtn" onclick="closeDrawer()">×</a>
+        <div style="margin-top: 25px;">
+            <a class="menuLink" href="#" onclick="alert('*Entering general settings* ...joke')">General</a>
+            <a class="menuLink" href="#" onclick="alert('*Entering graphics settings* ... joke')">Graphics</a>
+            <a class="menuLink" href="#" onclick="alert('Developed by: Lambuson and Elangos')">About</a>
+        </div>
+    </div>
     <div class="leftHeaderColumn">
-        <div class="hamburgerContainer">
+        <div class="hamburgerContainer" onclick="openDrawer()">
             <div class="hamburgerBars"></div>
             <div class="hamburgerBars"></div>
             <div class="hamburgerBars"></div>
         </div>
     </div>
     <div class="midHeaderColumn"><h1>Who You?</h1></div>
+    <div class="rightHeaderColumn"><a class="info" href="#">
+    </div>
 </div>
-
 </body>
 <script src="script.js"></script>
 </html>
