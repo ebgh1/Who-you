@@ -1,32 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who You?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="margin: 0; padding: 0;">
-<div>
-    <div class="headerBox">
-    <!-- style="border: solid 1px red; -->
-    <div id="menu" class="sidebar">
-        <a href="#" class="closebtn" onclick="closeDrawer()">×</a>
-        <div style="margin-top: 25px;">
-            <a class="menuLink" href="#" onclick="alert('*Entering general settings* ...joke')">General</a>
-            <a class="menuLink" href="#" onclick="alert('*Entering graphics settings* ... joke')">Graphics</a>
-            <a class="menuLink" href="#" onclick="alert('Developed by: Lambuson and Elangos')">About</a>
+<body style="margin: 0; padding: 0; background-color:#66FCF1;">
+    <div>
+        <div class="headerBox">
+        <!-- style="border: solid 1px red; -->
+        <div id="menu" class="sidebar">
+            <a href="#" class="closebtn" onclick="closeDrawer()">×</a>
+            <div style="margin-top: 25px;">
+                <a class="menuLink" href="#" onclick="alert('*Entering general settings* ...joke')">General</a>
+                <a class="menuLink" href="#" onclick="alert('*Entering graphics settings* ... joke')">Graphics</a>
+                <a class="menuLink" href="#" onclick="alert('Developed by: A.R. Elangos and J.E. Lambuson')">About</a>
+            </div>
+        </div>
+        <div class="leftHeaderColumn">
+            <div class="hamburgerContainer" onclick="openDrawer()">
+                <div class="hamburgerBars"></div>
+                <div class="hamburgerBars"></div>
+                <div class="hamburgerBars"></div>
+            </div>
+        </div>
+        <div class="midHeaderColumn"><h1>What Game Character Are You?</h1></div>
+        <div class="rightHeaderColumn"><a class="info" href="#"></a>
         </div>
     </div>
-    <div class="leftHeaderColumn">
-        <div class="hamburgerContainer" onclick="openDrawer()">
-            <div class="hamburgerBars"></div>
-            <div class="hamburgerBars"></div>
-            <div class="hamburgerBars"></div>
+
+    <div class="flexContainer">
+        <div class="questionContainer">
+           <h4>What will you do the moment you spawn?</h4>
+            <ul class="answerList">
+                <li><input type="radio" name="q1" onclick="assignAnswer(this.name, this.value)" value="Snake"> Hide in a cardboard box.</li>
+                <li><input  type="radio" name="q1" onclick="assignAnswer(this.name, this.value)" value="Doom Slayer"> Rip and tear until it is done.</li>
+                <li><input  type="radio" name="q1" onclick="assignAnswer(this.name, this.value)" value="Mario"> Smash bricks with my head.</li>
+                <li><input  type="radio" name="q1" onclick="assignAnswer(this.name, this.value)" value="Steve"> Punch trees with my bare fists.</li>
+                <li><input  type="radio" name="q1" onclick="assignAnswer(this.name, this.value)" value="Sonic"> "Gotta go fast!"</li>
+            </ul>
         </div>
     </div>
-    <div class="midHeaderColumn"><h1>Who You?</h1></div>
-    <div class="rightHeaderColumn"><a class="info" href="#">
+
+    <div class="flexContainer">
+        <div class="questionContainer">
+           <h4>What will you do the moment you spawn?</h4>
+            <ul class="answerList">
+                <li><input type="radio" name="q2" onclick="assignAnswer(this.name, this.value)" value="Snake"> Hide in a cardboard box.</li>
+                <li><input  type="radio" name="q2" onclick="assignAnswer(this.name, this.value)" value="Doom Slayer"> Rip and tear until it is done.</li>
+                <li><input  type="radio" name="q2" onclick="assignAnswer(this.name, this.value)" value="Mario"> Smash bricks with my head.</li>
+                <li><input  type="radio" name="q2" onclick="assignAnswer(this.name, this.value)" value="Steve"> Punch trees with my barefists.</li>
+                <li><input  type="radio" name="q2" onclick="assignAnswer(this.name, this.value)" value="Sonic"> "Gotta go fast!"</li>
+            </ul>
+        </div>
     </div>
-</div>
+
+    <div class="flexContainer">
+        <div class="questionContainer">
+           <h4>What will you do the moment you spawn?</h4>
+            <ul class="answerList">
+                <li><input type="radio" name="q3" onclick="assignAnswer(this.name, this.value)" value="Snake"> Hide in a cardboard box.</li>
+                <li><input  type="radio" name="q3" onclick="assignAnswer(this.name, this.value)" value="Doom Slayer"> Rip and tear until it is done.</li>
+                <li><input  type="radio" name="q3" onclick="assignAnswer(this.name, this.value)" value="Mario"> Smash bricks with my head.</li>
+                <li><input  type="radio" name="q3" onclick="assignAnswer(this.name, this.value)" value="Steve"> Punch trees with my barefists.</li>
+                <li><input  type="radio" name="q3" onclick="assignAnswer(this.name, this.value)" value="Sonic"> "Gotta go fast!"</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flexContainer">
+        <div class="questionContainer">
+           <h4>What will you do the moment you spawn?</h4>
+            <ul class="answerList">
+                <li><input type="radio" name="q4" onclick="assignAnswer(this.name, this.value)" value="Snake"> Hide in a cardboard box.</li>
+                <li><input  type="radio" name="q4" onclick="assignAnswer(this.name, this.value)" value="Doom Slayer"> Rip and tear until it is done.</li>
+                <li><input  type="radio" name="q4" onclick="assignAnswer(this.name, this.value)" value="Mario"> Smash bricks with my head.</li>
+                <li><input  type="radio" name="q4" onclick="assignAnswer(this.name, this.value)" value="Steve"> Punch trees with my barefists.</li>
+                <li><input  type="radio" name="q4" onclick="assignAnswer(this.name, this.value)" value="Sonic"> "Gotta go fast!"</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flexContainer">
+        <div class="questionContainer">
+           <h4>What will you do the moment you spawn?</h4>
+            <ul class="answerList">
+                <li><input type="radio" name="q5" onclick="assignAnswer(this.name, this.value)" value="Snake"> Hide in a cardboard box.</li>
+                <li><input  type="radio" name="q5" onclick="assignAnswer(this.name, this.value)" value="Doom Slayer"> Rip and tear until it is done.</li>
+                <li><input  type="radio" name="q5" onclick="assignAnswer(this.name, this.value)" value="Mario"> Smash bricks with my head.</li>
+                <li><input  type="radio" name="q5" onclick="assignAnswer(this.name, this.value)" value="Steve"> Punch trees with my barefists.</li>
+                <li><input  type="radio" name="q5" onclick="assignAnswer(this.name, this.value)" value="Sonic"> "Gotta go fast!"</li>
+            </ul>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>

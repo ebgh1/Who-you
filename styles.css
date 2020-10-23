@@ -4,20 +4,7 @@
 
 
 
-@media screen and (max-width: 600px){
-    .midHeaderColumn{
-        font-size: smaller;
-        text-align: center;
-        padding-top: 2px;
-    }
-
-    .hamburgerBars {
-        width: 30px;
-        height: 6px;
-    }
-}
-
-/* Header Styles */
+/* Header */
 
 .hamburgerBars {
     width: 40px;
@@ -35,6 +22,7 @@
 .hamburgerContainer:hover {
     background-color: grey;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 
@@ -64,15 +52,7 @@
 }
 
 
-.container {
-    height: 100%;
-    min-height: 100%;
-	display: flex;
-    flex-direction: column;
-    color: red;
-}
-
-/* Drawer Styles */
+/* Drawer */
 
 .sidebar {
     height: 100%;
@@ -109,4 +89,105 @@
 
 .menuLink {
     margin-top: 10px;
+}
+
+/* Question window */
+
+.answerList {
+    font-size: smaller;
+    list-style-type: none;
+    margin-top: 2%;
+    left: 0;
+    margin-right: 7%
+}
+
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+ .questionContainer {
+    background-color: #f1f1f1;
+    width: 80%;
+    margin-top: 1%;
+    margin: 10px;
+    text-align: center;
+    line-height: 175%;
+    font-size: 175%;
+    border: solid 10px  #0b0C10;
+}
+
+
+.answerTable {
+    color: #66FCF1;
+    margin-top: 1%;
+    background-color: #0b0C10;
+}
+
+.submitBtn {
+    background-color: #0b0C10;
+    font-size: 150%;
+    color: white;
+    padding: 2.5% 10%;
+    cursor: pointer; 
+    border-radius: 20px;
+    margin: 2.5%;
+}
+
+.submitBtn:hover {
+    background-color: #2c3531;
+}
+
+.resetBtn {
+    background-color:red;
+    color:white;
+    padding: 1% 2%;
+    cursor: pointer; 
+    border-radius: 20px;
+    margin: 2%;
+}
+
+.resetBtn:hover{
+    background-color: tomato;
+    cursor: pointer;
+}
+
+/* Results bar */
+
+.resultBar {
+    height: 99%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:#66FCF1;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 20px;
+}
+
+.resultBar .closebtn:hover{
+    color: coral;
+}
+
+/* Phone optimizations */
+
+@media screen and (max-width: 600px){
+    .questionContainer{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .midHeaderColumn{
+        font-size: x-small;
+        text-align: center;
+        padding-top: 2px;
+    }
+
+    .hamburgerBars {
+        width: 30px;
+        height: 6px;
+    }
 }
