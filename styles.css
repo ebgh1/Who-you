@@ -9,7 +9,7 @@
 .hamburgerBars {
     width: 40px;
     height: 6px;
-    background-color:#66FCF1;
+    background-color:#9BD2AD;
     margin: 6px 0;
     border-radius: 10px;
 }
@@ -28,7 +28,7 @@
 
 .headerBox {
     display: flex;
-    background-color:#0b0C10;
+    background-color:#252F2A;
     text-align: center;
     left: 0;
     top: 0;
@@ -37,18 +37,20 @@
 .leftHeaderColumn {
     padding-top: 5px;
     padding: 15px;
-    width: 33%;
+    flex: 1;
 }
 
 .midHeaderColumn {
-    color: #66FCF1;
+    color: #9BD2AD;
     text-align: center;
-    width: 33%;
+    vertical-align: middle;
+    width: 500px;
 }
 
 .rightHeaderColumn {
-    color: #66FCF1;
-    width: 33%;
+    color: #9BD2AD;
+    padding: 15px;
+    flex: 1;
 }
 
 
@@ -69,7 +71,7 @@
 .sidebar a {  
     text-decoration: none;
     font-size: 25px;
-    color:  #66FCF1;
+    color:  #9BD2AD;
     display: block;
 }
 
@@ -108,27 +110,32 @@
   }
   
  .questionContainer {
-    background-color: #f1f1f1;
+    background-color: #F3F7E7;
     width: 80%;
+    max-width: 720px;
     margin-top: 1%;
     margin: 10px;
     text-align: center;
     line-height: 175%;
     font-size: 175%;
-    border: solid 10px  #0b0C10;
+    border: solid 10px  #252F2A;
+}
+
+.questionContainer * {
+    color:#252F2A;
 }
 
 
 .answerTable {
-    color: #66FCF1;
+    color: #9BD2AD;
     margin-top: 1%;
-    background-color: #0b0C10;
+    background-color: #252F2A;
 }
 
 .submitBtn {
-    background-color: #0b0C10;
+    background-color: #252F2A;
     font-size: 150%;
-    color: white;
+    color: #F3F7E7;
     padding: 2.5% 10%;
     cursor: pointer; 
     border-radius: 20px;
@@ -140,8 +147,8 @@
 }
 
 .resetBtn {
-    background-color:red;
-    color:white;
+    background-color:#3E8472;
+    color:#F3F7E7;
     padding: 1% 2%;
     cursor: pointer; 
     border-radius: 20px;
@@ -161,7 +168,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color:#66FCF1;
+    background-color:#9BD2AD;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 20px;
@@ -177,17 +184,20 @@
     .questionContainer{
         font-size: 80%;
     }
-}
 
-@media screen and (max-width: 600px){
     .midHeaderColumn{
         font-size: x-small;
-        text-align: center;
-        padding-top: 2px;
+        padding-top: 10px;
     }
 
     .hamburgerBars {
         width: 30px;
-        height: 6px;
+        height: 4px;
+    }
+
+    .hamburgerContainer {
+        width: 40px;
+        padding: 3px;
+        padding-left: 8px;
     }
 }
