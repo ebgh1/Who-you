@@ -47,7 +47,8 @@ console.log(answers)
 function renderCharacterDetails(character) {
   document.getElementById("characterName").innerText = character;
   document.getElementById("tagline").innerText = taglines[character];
-  document.getElementById("characterPic").src = pictureDir[character];
+  renderCharacterDetails(character);
+  document.getElementById("resultWindow").style.display = "block";
 
   const data = extraData[character];
   document.getElementById("coreTrait").innerText = data.coreTrait;
