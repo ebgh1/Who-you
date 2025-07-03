@@ -93,10 +93,10 @@ const taglines = {
 }
 
 const pictureDir = {
-"THE ALCHEMIST":"images/snake.jpg",
-"THE SWASHBUCKLER": "images/doomSlayer.jpg",
-"THE LOREWEAVER": "images/mario.jpg",
-"THE GEARMASTER": "images/steve.png"
+"THE ALCHEMIST":"images/THEALCHEMIST.jpg",
+"THE SWASHBUCKLER": "images/THESWASHBUCKLER.jpg",
+"THE LOREWEAVER": "images/THELOREWEAVER.jpg",
+"THE GEARMASTER": "images/THEGEARMASTER.png"
 }
 
 const extraData = {
