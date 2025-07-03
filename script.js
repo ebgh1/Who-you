@@ -18,20 +18,18 @@ if (charIndex !== -1) scoreboard[charIndex] += 1;
 }
 
 function evaluateAnswers(){
-if(Object.values(answers).includes("")){
-  alert("There are questions that you have left unanswered.")
+  if (Object.values(answers).includes("")) {
+    alert("There are questions that you have left unanswered.");
+  } else {
+    document.getElementById("submitBtn").disabled = true;
+    console.log(Object.values(answers));
+    Object.values(answers).map(incrementScore);
+    const character = youAre();
+    renderCharacterDetails(character); // <- This now handles everything
+    openResults();
+  }
 }
-else{
-  document.getElementById("submitBtn").disabled = true
-  console.log(Object.values(answers))
-  Object.values(answers).map(incrementScore)
-  const character = youAre()
-  document.getElementById("characterName").innerHTML = character
-  document.getElementById("tagline").innerHTML = `"${taglines[character]}"`
-  renderCharacterDetails(character);
-  openResults()
-}
-}
+
 
 function youAre() {
 const highestScore = Math.max(...scoreboard);
@@ -47,7 +45,7 @@ console.log(answers)
 function renderCharacterDetails(character) {
   document.getElementById("characterName").innerText = character;
   document.getElementById("tagline").innerText = taglines[character];
-  renderCharacterDetails(character);
+  document.getElementById("characterPic").src = pictureDir[character];
   document.getElementById("resultWindow").style.display = "block";
 
   const data = extraData[character];
@@ -59,7 +57,7 @@ function renderCharacterDetails(character) {
   new Chart(ctx, {
     type: 'radar',
     data: {
-      labels: ['Confidence', 'Creativity', 'Authenticity', 'Popularity', 'Value Giver', 'Cringe Factor'],
+      labels: ['Precision', 'Building Speed', 'Structural Stability', 'Narrative Design', 'Mechanical Aptitude', 'Adaptability'],
       datasets: [{
         label: 'Skill Stats',
         data: data.skills,
