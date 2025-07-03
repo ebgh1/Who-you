@@ -28,7 +28,7 @@ else{
   const character = youAre()
   document.getElementById("characterName").innerHTML = character
   document.getElementById("tagline").innerHTML = `"${taglines[character]}"`
-  document.getElementById("characterPic").src = pictureDir[character]
+  renderCharacterDetails(character);
   openResults()
 }
 }
@@ -44,29 +44,89 @@ answers[questionNo] = answerVal
 console.log(answers)
 }
 
+function renderCharacterDetails(character) {
+  document.getElementById("characterName").innerText = character;
+  document.getElementById("tagline").innerText = taglines[character];
+  document.getElementById("characterPic").src = pictureDir[character];
+
+  const data = extraData[character];
+  document.getElementById("coreTrait").innerText = data.coreTrait;
+  document.getElementById("behaviour").innerText = data.behaviour;
+  document.getElementById("quoteVibe").innerText = data.quoteVibe;
+
+  const ctx = document.getElementById("skillChart").getContext("2d");
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Confidence', 'Creativity', 'Authenticity', 'Popularity', 'Value Giver', 'Cringe Factor'],
+      datasets: [{
+        label: 'Skill Stats',
+        data: data.skills,
+        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+        borderColor: 'rgba(255, 206, 86, 1)',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: false,
+      scales: {
+        r: {
+          beginAtZero: true,
+          max: 100
+        }
+      }
+    }
+  });
+}
+
 const characters = [
-"Snake",
-"Doom Slayer",
-"Mario",
-"Steve",
-"Sonic"
+"THE ALCHEMIST",
+"THE SWASHBUCKLER",
+"THE LOREWEAVER",
+"THE GEARMASTER"
 ];
 
 const taglines = {
-"Snake": "He who controls the battlefield, controls history.",
-"Doom Slayer": "Rip and tear until it is done.",
-"Mario": "It's a-me, Mario!",
-"Steve": "Ooof!",
-"Sonic": "Let's blast through with Sonic Speed!"
+"THE ALCHEMIST": "Your quest is perfection, transforming bricks into flawless creations through meticulous precision. Every stud must align!",
+"THE SWASHBUCKLER": "You build at lightning speed, embracing chaos and fun! Your motto: Build fast, play faster, and improvise your way to epic adventures!",
+"THE LOREWEAVER": "You don't just build structures, you build worlds and weave epic tales. Your bricks are the stage where minifig dramas unfold!",
+"THE GEARMASTER": "You master movement and mechanics! For you, a build isn't finished until it does something amazing. Function is your ultimate art!"
 }
 
 const pictureDir = {
-"Snake":"images/snake.jpg",
-"Doom Slayer": "images/doomSlayer.jpg",
-"Mario": "images/mario.jpg",
-"Steve": "images/steve.png",
-"Sonic": "images/sonic.jpg"
+"THE ALCHEMIST":"images/snake.jpg",
+"THE SWASHBUCKLER": "images/doomSlayer.jpg",
+"THE LOREWEAVER": "images/mario.jpg",
+"THE GEARMASTER": "images/steve.png"
 }
+
+const extraData = {
+  "THE ALCHEMIST": {
+    coreTrait: "Precision, accuracy, and adherence to instructions or a perfect vision above all else.",
+    behaviour: "Follows instructions step-by-step religiously. If building freely, plans meticulously, sorts pieces obsessively, measures alignments, and gets visibly stressed by asymmetry or mistakes. Their builds are clean, stable, and just right",
+    quoteVibe: "Wait, that plate is offset by half a stud... it's RUINED!",
+    skills: [100, 70, 90, 30, 40, 20]
+  },
+  "THE SWASHBUCKLER": {
+    coreTrait: "Thrives on speed, action, and immediate results. Process > Perfection.",
+    behaviour: "Rips bags open, dumps pieces, builds incredibly fast (often skipping steps or improvising). Prioritizes playability and fun now over aesthetics or stability. Builds might be chaotic, fragile, but full of energy. Loves minifig battles and swooshability.",
+    quoteVibe: "Instructions? Who needs 'em! ZOOM! CRASH! Awesome!",
+    skills: [30, 90, 20, 90, 30, 90]
+  },
+  "THE LOREWEAVER": {
+    coreTrait: "Focuses on characters, story, and world-building. Bricks are props and sets.",
+    behaviour: "Builds scenes, not just structures. Spends more time posing minifigs and creating narratives than on complex building techniques. Might have simpler builds but incredibly rich backstories. Loves creating scenarios, dialogues, and dramatic events.",
+    quoteVibe: "And then the space knight said to the dragon... wait, I need a throne room for this!",
+    skills: [50, 60, 70, 50, 30, 100]
+  },
+    "THE GEARMASTER": {
+    coreTrait: "Driven by function, mechanics, and solving technical challenges.",
+    behaviour: "Fascinated by gears, levers, hinges, and Technic elements. Prioritizes making things work – vehicles that roll smoothly, cranes that lift, doors that open automatically. Aesthetics are secondary to functionality and clever solutions. Might dismantle things just to see how they function.",
+    quoteVibe: "Cool castle, but does the drawbridge actually retract with this pulley system I designed?",
+    skills: [90, 50, 100, 20, 80, 90]
+  },
+};
+
 
 let scoreboard = new Array(characters.length).fill(0);
 
@@ -75,8 +135,7 @@ let answers = {
 "q2": "",
 "q3": "",
 "q4": "",
-"q5": "",
-"q6": ""
+"q5": ""
 }
 
 
