@@ -96,7 +96,7 @@ const pictureDir = {
 "THE ALCHEMIST":"images/THEALCHEMIST.jpg",
 "THE SWASHBUCKLER": "images/THESWASHBUCKLER.jpg",
 "THE LOREWEAVER": "images/THELOREWEAVER.jpg",
-"THE GEARMASTER": "images/THEGEARMASTER.png"
+"THE GEARMASTER": "images/THEGEARMASTER.jpg"
 }
 
 const extraData = {
