@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What Brick Builder Are You?</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body style="margin: 0; padding: 0; background-color:#DDE2C0;">
     <div>
@@ -98,6 +99,27 @@
     <div style="text-align: center;">
     <button id = "submitBtn" class="submitBtn" onclick="evaluateAnswers();">Submit Answers</button>
     </div>
+<div id="resultWindow" class="modal" style="display: none;">
+  <div id="resultCard" class="character-card">
+    <h2 id="characterName">Character Name</h2>
+    <img id="characterPic" src="" alt="Character Image">
+    <p id="tagline">"Tagline here..."</p>
+
+    <div class="character-details">
+      <h3>Core Trait</h3>
+      <p id="coreTrait">Trait goes here</p>
+
+      <h3>Behaviour</h3>
+      <p id="behaviour">Behaviour description here</p>
+
+      <h3>Quote Vibe</h3>
+      <p id="quoteVibe">Quote vibe here</p>
+
+      <h3>Skill Chart</h3>
+      <canvas id="skillChart" width="300" height="300"></canvas>
+    </div>
+  </div>
+</div>
 
 
 
